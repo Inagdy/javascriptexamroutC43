@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/all.min.css" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-------------------------------------Display End-------------------------------->
+    <!--* slider *-->
+    <div
+      class="slider min-vh-100 position-fixed d-flex top-0 bg-black text-white z-2"
+    >
+      <div
+        class="navBody d-flex flex-column justify-content-between vh-100 p-4 bg-black text-white"
+      >
+        <div class="links">
+          <ul class="list-unstyled">
+            <li class="position-relative py-2" onclick="getAllMovies()">
+              Now Playing
+            </li>
+            <li class="position-relative py-2" onclick="getAllMovies()">
+              Populer
+            </li>
+            <li class="position-relative py-2" onclick="getTopRatedMovies()">
+              Top Rated
+            </li>
+            <li class="position-relative py-2" onclick="gettrendingmovies()">
+              Trending
+            </li>
+            <li class="position-relative py-2" onclick="getAllMovies()">
+              Upcoming
+            </li>
+            <li class="position-relative py-2 " id="contactUs" >Contact Us</li>
+          </ul>
+        </div>
+        <div class="text-start">
+          <div class="socialMedia mb-3">
+            <i class="fa-brands fa-facebook fa-xl me-2"></i>
+            <i class="fa-brands fa-twitter fa-xl me-2"></i>
+            <i class="fa-solid fa-globe fa-xl"></i>
+          </div>
+          <div class="copyRight">
+            <p>Copyright Â© 2019 All Rights <br />Reserved.</p>
+          </div>
+        </div>
+      </div>
+      <div
+        class="d-flex flex-column justify-content-between py-2 px-2 bg-white text-center nav-panner"
+      >
+        <img class="logo" src="./img/logo.png" alt="logo" />
+        <span class="open-close d-block"
+          ><i class="fa-solid open-close-icon fa-2x fa-align-justify"></i
+        ></span>
+        <span class="open-close close d-none text-dark"
+          ><i class="fa-solid fa-xmark fa-2x close-button"></i
+        ></span>
+        <div class="text-black">
+          <i class="fa-solid fa-globe d-block m-auto mb-2 fa-xl"></i>
+          <i class="fa-solid fa-share-nodes fa-xl"></i>
+        </div>
+      </div>
+    </div>
+    <!-- slider Ended -->
+    <section id="hero" class="container py-5">
+      <input
+        onchange="getSerachMovies(this.value)"
+        id="search"
+        type="search"
+        placeholder="Search"
+        class="form-control w-50 mx-auto bg-transparent rounded-pill text-white shadow-none border-white px-3"
+      />
+      <div class="row g-4 mt-3 text-white" id="rowData"></div>
+    </section>
+
+    <!-- form -->
+    <section id="contact" class="container text-white py-5">
+      <h2>Contact US</h2>
+      <div class="container mt-4">
+        <h2>User Registration Form</h2>
+        <form id="registrationForm" action="#" method="post" novalidate>
+            <div class="row mt-3">
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="name">Name:</label>
+                        <input type="text" required id="name" maxlength="37" class="form-control" placeholder="Enter Your Name">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" required id="email" class="form-control" placeholder="Enter Your Email">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="phone">Phone Number:</label>
+                        <input type="tel" required id="phone" class="form-control" pattern="[0-9]{10}" placeholder="Enter Your Phone">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" required id="age" class="form-control" placeholder="Enter Your Age">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="col-md-6 position-relative">
+                    <div class="form-group">
+                        <label for="password">Password:</label>
+                        <input type="password" required id="password" class="form-control" placeholder="Enter Your Password">
+                        <span class="error"></span>
+                        <span class="showPass" onclick="togglePassword()"><i class="far fa-eye-slash"></i></span>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="form-group">
+                        <label for="repassword">ReEnter Password:</label>
+                        <input type="password" required id="repassword" class="form-control" placeholder="ReEnter Password">
+                        <span class="error"></span>
+                    </div>
+                </div>
+                <div class="col-md-12">
+                    <button type="submit" class="btn btn-primary mt-3">Submit</button>
+                </div>
+            </div>
+        </form>
+    </div>
+  </section>
+    <script src="./js/all.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/main.js"></script>
+  </body>
+</html>
